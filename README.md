@@ -26,7 +26,7 @@ ignition/modules/     - Deployment modules for Hardhat Ignition
 1. Clone the repository:
    ```bash
    git clone https://github.com/thenguyenltv/monadsweeper.git
-   cd hardhat
+   cd monadsweeper
    ```
 
 2. Install dependencies:
@@ -62,7 +62,7 @@ To deploy the `Monadsweeper` contract using Hardhat Ignition:
 npx hardhat ignition deploy ./ignition/modules/Monadsweeper.ts
 ```
 
-### Veridy Contracts on Monad
+### Verify Contracts on Monad
 
 ```bash
 npx hardhat verify <contract_address> --network monadTestnet
