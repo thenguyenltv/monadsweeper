@@ -1,4 +1,4 @@
-# Minesweeper Smart Contract Project
+# Monadsweeper Smart Contract Project
 
 This project implements a Minesweeper game as a smart contract on the EVM compatible like Monad blockchain. The project is built using Hardhat and includes tests, deployment scripts, and configuration for the Monad testnet.
 
@@ -8,11 +8,11 @@ This project implements a Minesweeper game as a smart contract on the EVM compat
 .env                  - Environment variables (e.g., private keys)
 hardhat.config.ts     - Hardhat configuration file
 contracts/            - Solidity smart contracts
-  minesweeper.sol     - Minesweeper game contract
+  Monadsweeper.sol     - Monadsweeper game contract
 test/                 - Test files for the contracts
-  minesweeper.ts      - Tests for the Minesweeper contract
+  Monadsweeper.ts      - Tests for the Monadsweeper contract
 ignition/modules/     - Deployment modules for Hardhat Ignition
-  Minesweeper.ts      - Deployment script for the Minesweeper contract
+  Monadsweeper.ts      - Deployment script for the Monadsweeper contract
 ```
 
 ## Prerequisites
@@ -50,18 +50,23 @@ npx hardhat compile
 
 ### Run Tests
 
-To run the tests for the `Minesweeper` contracts:
+To run the tests for the `Monadsweeper` contracts:
 ```bash
 npx hardhat test
 ```
 
 ### Deploy Contracts
 
-To deploy the `Minesweeper` contract using Hardhat Ignition:
+To deploy the `Monadsweeper` contract using Hardhat Ignition:
 ```bash
-npx hardhat ignition deploy ./ignition/modules/Minesweeper.ts
+npx hardhat ignition deploy ./ignition/modules/Monadsweeper.ts
 ```
 
+### Veridy Contracts on Monad
+
+```bash
+npx hardhat verify <contract_address> --network monadTestnet
+```
 
 ### Start a Local Node
 
@@ -70,7 +75,7 @@ To start a local Hardhat node:
 npx hardhat node
 ```
 
-### Interact with the Minesweeper Contract
+### Interact with the Monadsweeper Contract
 
 1. Start a new game:
    ```solidity
@@ -101,9 +106,9 @@ monadTestnet: {
 }
 ```
 
-## Minesweeper Contract Details
+## Monadsweeper Contract Details
 
-The Minesweeper contract implements a 9x9 board with 10 mines (size and mineCount can be higher in future update). Key features include:
+The Monadsweeper contract implements a 9x9 board with 10 mines (size and mineCount can be higher in future update). Key features include:
 
 - **Game Mechanics**: Mines are generated after the first move to ensure fairness.
 - **Bit Manipulation**: Each cell's state is stored in a single `uint8` for gas efficiency.
